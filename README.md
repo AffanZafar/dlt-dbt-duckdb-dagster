@@ -9,11 +9,14 @@ A modern, lightweight data pipeline using:
 - **[Dagster](https://dagster.io/)** for orchestration
 
 ## 🚀 Project Structure
-...
-├── dagster/ # Dagster pipelines and assets
-├── data-warehouse/ # Raw data and processed outputs
-├── dlt/ # Data extraction and loading scripts
-├── models/ # dbt models
-├── Data-Stack.jpeg # Architecture diagram
-└── pyproject.toml # Python dependencies
-...
+```plaintext
+.
+├── dagster/                  # Dagster pipelines and assets
+├── data-warehouse/           # Raw data and processed outputs 
+├── dlt/                      # Data extraction and loading scripts
+├── models/                   # dbt models
+├── Data-Stack.jpeg           # Architecture diagram
+├── .gitignore                # Git ignore rules
+├── README.md                 # Project documentation
+└── pyproject.toml            # Python dependencies
+```
