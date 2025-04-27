@@ -1,0 +1,10 @@
+# ~/.dbt/profiles.yml or project_dir/profiles.yml
+dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "/Users/affanzafar/Desktop/datawarehouse/data-warehouse/data.duckdb"  # Replace with your DuckDB file path
+      schema: rest_api_data      # Matches your table_schema                        # For loading remote data if needed
+      settings:
+        threads: 4                          # Optimize for your machine

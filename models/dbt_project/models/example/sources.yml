@@ -1,0 +1,14 @@
+# models/sources.yml
+version: 2
+
+sources:
+  - name: dlt_rest_api
+    schema: rest_api_data              # Matches table_schema
+    database: data                          # Matches table_catalog
+    meta:
+      organization: "Pokemon"   # Optional metadata
+    tables:
+      - name: pokemon
+        meta:
+          dagster:
+            asset_key: ["dlt_rest_api_pokemon"]
