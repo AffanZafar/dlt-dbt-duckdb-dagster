@@ -17,6 +17,5 @@ A modern, lightweight data pipeline using:
 ├── models/                   # dbt models
 ├── Data-Stack.jpeg           # Architecture diagram
 ├── .gitignore                # Git ignore rules
-├── README.md                 # Project documentation
-└── pyproject.toml            # Python dependencies
+├── README.md                 # Project documentation          
 ```
