@@ -1,12 +1,21 @@
-# Modern Data Stack: dlt + dbt + DuckDB + Dagster
+🚀 Modern Data Pipeline: ELT with dlt, dbt, DuckDB & Dagster
+A lightweight, open-source data engineering stack for end-to-end analytics—from raw data to business insights.
+
+✨ Key Features
+✅ Extract & Load: Automated data ingestion with dlt (Python-friendly)
+✅ Transform: SQL-based modelling with dbt + Duckdb
+✅ Orchestrate: Pipeline monitoring/scheduling via Dagster
+✅ Analyse: Blazing-fast queries with embedded Duckdb (no servers!)
+✅ Portable: Runs locally or scales to cloud (AWS/GCP/Azure)
+
+🌐 Ideal For
+Building self-service analytics for small/medium datasets
+
+Prototyping data products without heavy infrastructure
+
+Learning modern data tools with a fully open-source stack
 
 ![Data Stack Architecture](Data-Stack.jpeg) 
-
-A modern, lightweight data pipeline using:
-- **[dlt](https://dlthub.com/)** (data load tool) for extraction and loading
-- **[dbt](https://www.getdbt.com/)** for transformation
-- **[DuckDB](https://duckdb.org/)** as the analytical database
-- **[Dagster](https://dagster.io/)** for orchestration
 
 ## 🚀 Project Structure
 ```plaintext
