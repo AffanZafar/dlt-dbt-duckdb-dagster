@@ -1,5 +1,5 @@
 ## 🚀 Modern Data Pipeline: ELT with dlt, dbt, DuckDB & Dagster
-A lightweight, open-source data engineering stack for end-to-end analytics—from raw data to business insights.
+A lightweight, open-source and declarative data engineering stack for end-to-end analytics—from raw data to business insights.
 
 ## ✨ Key Features
 ✅ Extract & Load: Automated data ingestion with dlt (Python-friendly). <br/>
