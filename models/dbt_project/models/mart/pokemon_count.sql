@@ -2,6 +2,6 @@
 
 select name , COUNT(*) as pokemon_count
 
-from {{ ref('my_first_dbt_model') }}
+from {{ ref('src_pokemon') }}
 
 group by name

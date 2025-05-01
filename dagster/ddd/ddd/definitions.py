@@ -20,7 +20,8 @@ defs = Definitions(
     jobs=[all_assets_job],
     schedules=[daily_schedule],
     resources={
-        "dbt": DbtCliResource(project_dir=dbtlearn_project),
+        "dbt": DbtCliResource(project_dir=dbtlearn_project.project_dir ,
+                              profiles_dir=dbtlearn_project.profiles_dir),
         "duckdb": DuckDBResource(
             database="/Users/affanzafar/Desktop/datawarehouse/data-warehouse/data.duckdb",  # required
         ) ,
