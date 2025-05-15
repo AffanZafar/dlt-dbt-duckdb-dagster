@@ -8,7 +8,7 @@ from dagster import asset
 from dagster_dlt import DagsterDltResource, dlt_assets
 from dlt import pipeline
 from .rest_api_pipeline import load_pokemon
-
+from .jaffleshop import jaffleshop
 
 @dlt_assets(
     dlt_source=load_pokemon(),
@@ -21,6 +21,19 @@ from .rest_api_pipeline import load_pokemon
     group_name="dlt_pokemon",
 )
 def dagster_pokemon_assets(context: AssetExecutionContext, dlt: DagsterDltResource):
+    yield from dlt.run(context=context)
+
+@dlt_assets(
+    dlt_source=jaffleshop(),
+    dlt_pipeline = pipeline(
+    pipeline_name="orders_pipeline",
+    destination=dlt.destinations.duckdb("/Users/affanzafar/Desktop/datawarehouse/data-warehouse/data.duckdb"),
+    dataset_name="jaffleshop",
+    dev_mode=True,
+),
+    group_name="jaffleshop",
+)
+def dagster_jaffleshop_assets(context: AssetExecutionContext, dlt: DagsterDltResource):
     yield from dlt.run(context=context)
 
 

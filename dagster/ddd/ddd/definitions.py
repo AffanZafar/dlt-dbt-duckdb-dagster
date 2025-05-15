@@ -1,7 +1,7 @@
 from dagster import Definitions
 import dagster as dg
 from dagster_dbt import DbtCliResource
-from .assets import dbtlearn_dbt_assets , dagster_pokemon_assets 
+from .assets import dbtlearn_dbt_assets , dagster_pokemon_assets  , dagster_jaffleshop_assets
 from .project import dbtlearn_project
 from dagster_duckdb import DuckDBResource
 from dagster_dlt import DagsterDltResource
@@ -16,7 +16,7 @@ daily_schedule = dg.ScheduleDefinition(
 )
 
 defs = Definitions(
-    assets=[dagster_pokemon_assets, dbtlearn_dbt_assets],
+    assets=[dagster_pokemon_assets, dbtlearn_dbt_assets , dagster_jaffleshop_assets ],
     jobs=[all_assets_job],
     schedules=[daily_schedule],
     resources={
