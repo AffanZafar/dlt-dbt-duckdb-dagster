@@ -3,12 +3,22 @@ version: 2
 
 sources:
   - name: dlt_rest_api
-    schema: rest_api_data              # Matches table_schema
-    database: data                          # Matches table_catalog
-    meta:
-      organization: "Pokemon"   # Optional metadata
+    schema: rest_api_data             # Matches table_schema
+    database: data                          
     tables:
       - name: pokemon
         meta:
           dagster:
             asset_key: ["dlt_rest_api_pokemon"]
+
+      - name: raw_customers
+        description: One record per person who has purchased one or more items
+      - name: raw_orders
+        description: One record per order (consisting of one or more order items)
+      - name: raw_items
+        description: Items included in an order
+      - name: raw_stores
+      - name: raw_products
+        description: One record per SKU for items sold in stores
+      - name: raw_supplies
+        description: One record per supply per SKU of items sold in stores
