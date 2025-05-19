@@ -5,6 +5,7 @@ setup.py
 ddd/__init__.py
 ddd/assets.py
 ddd/definitions.py
+ddd/jaffleshop.py
 ddd/project.py
 ddd/rest_api_pipeline.py
 ddd/schedules.py

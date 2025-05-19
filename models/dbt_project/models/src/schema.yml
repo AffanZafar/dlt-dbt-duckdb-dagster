@@ -1,8 +1,12 @@
-
 version: 2
 
 models:
-  - name: my_first_dbt_model
-
-  - name: my_second_dbt_model
-
+  - name: stg_customers  # Only this model will appear in Dagster
+    meta:
+      dagster:
+        asset_key: ["stg_customers"]
+    tags: ["jaffle_shop"]
+  
+  - name: src_pokemon
+    config:  # Applies to all other models in this directory
+      tags: ["pokemon"]
