@@ -1,0 +1,5 @@
+dagster-dbt
+dagster-dlt
+dagster-duckdb
+dagster-webserver
+dbt-duckdb
